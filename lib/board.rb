@@ -50,7 +50,16 @@ class Board
   def update(input, player)
     @cells[input.to_i - 1] = player.token
   end
+<<<<<<< HEAD
 
+=======
+  
+  
+  # Copy won?() and winner() methods from Game class into the Board class
+  # Since the AI will create multiple hypothetical boards and try to find the winner,
+  # We need won?() and winner() to be members of the Board class
+  
+>>>>>>> 46f3d24d2d53471f76499e7bc76cf2bf93ba8373
   def won?
     WIN_COMBINATIONS.each do |combo|
       return combo if @cells[combo[0]] == @cells[combo[1]] && @cells[combo[1]] == @cells[combo[2]] && @cells[combo[0]] != " "
