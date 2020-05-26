@@ -22,7 +22,6 @@ class Players
     
     def move(board)
 
-<<<<<<< HEAD
       new_board = nil 
       moves = [] 
       scores = [] 
@@ -38,7 +37,7 @@ class Players
           
           moves << i
           scores << minimax(new_board, @token) 
-=======
+          
       new_board = nil # board to store a hypothetical move
       moves = [] # array to store possible moves (empty spots)
       scores = [] # array to store the minimax score of each moves[]
@@ -57,7 +56,6 @@ class Players
           
           moves << i # add the spot to the array of possible moves
           scores << minimax(new_board, @token) # get the minimax score of that move
->>>>>>> 46f3d24d2d53471f76499e7bc76cf2bf93ba8373
         end  
         
         i += 1
@@ -72,9 +70,7 @@ class Players
       end
       
       move = max_moves.shuffle[0]
-      
-<<<<<<< HEAD
-=======
+
       # Now we need to return move that has the highest minimax score
       # If multiple moves have the same minimax score, then pick a random one
       # This is to test the robustness of the algorithm so it doesn't end up playing the same game every time
@@ -90,15 +86,13 @@ class Players
       move = max_moves.shuffle[0] #Randomize!!!!
       
       # Return the move
->>>>>>> 46f3d24d2d53471f76499e7bc76cf2bf93ba8373
+
       return (move + 1).to_s
       
     end
     
     def minimax(board, token)
-<<<<<<< HEAD
 
-=======
       # minimax() takes two variables
       # board is a board representing the next hypothetical move
       # token is the player which made the hypothetical move
