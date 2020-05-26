@@ -30,6 +30,8 @@ class Players
       while i < 9
       
         if board.cells[i] == " "
+          
+          new_board = board
 
           new_board = Board.new
           new_board.cells = Marshal.load(Marshal.dump(board.cells)) 
